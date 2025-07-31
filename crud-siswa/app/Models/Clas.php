@@ -8,7 +8,7 @@ class Clas extends Model
 {
       protected $tabe = "clases";
 
-     protected $guarde = [];
+     protected $guarded = [];
 
      public function users (){
       return $this->hasMany(User::class, 'clas_id');
