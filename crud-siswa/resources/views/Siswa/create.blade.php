@@ -19,7 +19,10 @@
                 <option value="1">XII PPLG 1</option>
                 <option value="2">XII PPLG 2</option>
                 <option value="3">XII PPLG 3</option>
-            </select>
+            </select><br>
+            @error('kelas')
+            <small style="color:red">{{$message}}</small>
+            @enderror
              </div>
 </br>
 
@@ -27,36 +30,60 @@
         <label for="">Name:</label>
         <br>
         <input type="text" name="name">
+        <br>
+                @error('name')
+                <small style="color:red">{{$message}}</small>
+                 @enderror
     </div>
     <br>
             <div>
                 <label for="">Nisn:</label>
                 <br>
                 <input type="text" name="nisn">
+                <br>
+                @error('nisn')
+                <small style="color:red">{{$message}}</small>
+                 @enderror
         </div>
     <br>
         <div>
                 <label for="">Alamat:</label>
                 <br>
                 <input type="text" name="alamat">
+                <br>
+                @error('alamat')
+                <small style="color:red">{{$message}}</small>
+                 @enderror
         </div>
     <br>
         <div>
                 <label for="">Email:</label>
                 <br>
                 <input type="text" name="email">
+                <br>
+                @error('email')
+                <small style="color:red">{{$message}}</small>
+                 @enderror
         </div>
     <br>
             <div>
                     <label for="">Password:</label>
                     <br>
                     <input type="password" name="password">
+                    <br>
+                @error('password')
+                <small style="color:red">{{$message}}</small>
+                 @enderror
             </div>
         <br>
                 <div>
                     <label for="">No Handphone:</label>
                     <br>
                     <input type="text" name="no_handphone">
+                    <br>
+                @error('no_handphone')
+                <small style="color:red">{{$message}}</small>
+                 @enderror
                 </div>
         <br>
                 <div>
