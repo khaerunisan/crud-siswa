@@ -6,12 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Clas extends Model
 {
-      protected $tabe = "clases";
+     protected $table = "clases";
 
      protected $guarded = [];
 
      public function users (){
-      return $this->hasMany(User::class, 'clas_id');
-}
-
+        return $this->hasMany(User::class, 'clas_id');
+     }
 }
