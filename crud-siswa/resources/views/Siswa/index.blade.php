@@ -30,9 +30,20 @@
                     <td>{{ $siswa->clas->name }}</td>
                     <td>{{ $siswa->alamat }}</td>
                      <td class="option-links">
-                        <a href="#">Hapus</a>
-                        <a href="#">Edit</a>
-                        <a href="#">Detail</a>
+                        {{-- Delete --}}
+                        <a href="/Siswa/delete/{{ $siswa->id }}" onclick="return confirm('yakin?')">
+                            Delete
+                        </a>
+
+                        {{-- Edit --}}
+                         <a href="/Siswa/edit/{{ $siswa->id }}" onclick="return confirm('yakin?')">
+                           Edit
+                        </a>
+
+                        {{-- Detail --}}
+                         <a href="/Siswa/detail/{{ $siswa->id }}" onclick="return confirm('yakin?')">
+                           Detail
+                        </a>
                     </td>
                 </tr>
                 @endforeach
