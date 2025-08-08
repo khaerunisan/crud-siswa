@@ -41,9 +41,7 @@
                         </a>
 
                         {{-- Detail --}}
-                         <a href="/Siswa/detail/{{ $siswa->id }}" onclick="return confirm('yakin?')">
-                           Detail
-                        </a>
+                         <a href="/Siswa/show/{{ $siswa->id }}">Detail</a>
                     </td>
                 </tr>
                 @endforeach
