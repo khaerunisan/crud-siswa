@@ -91,6 +91,25 @@ class SiswaController extends Controller
 
         //pindahkan user ke halaman detail siswa dengan mengerjakan data detailnya
         return view('Siswa.show', compact('datauser'));
+
+        }
+
+         //fungsi untuk mengarahkan user ke halaman edit siswa
+        public function edit($id){
+
+            //siapkan data clas dan tampung datanya ke dalam variabel
+        $clases =Clas::all();
+
+        //ambil data user berdasarkan id yang di kirimkan
+        $datauser = User::find($id);
+
+        if($datauser == null) {
+            return redirect('/');
+
+        }
+
+        return view('siswa.edit', compact('clases', 'datauser'));
+
     }
 }
  
