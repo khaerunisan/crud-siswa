@@ -111,5 +111,38 @@ class SiswaController extends Controller
         return view('siswa.edit', compact('clases', 'datauser'));
 
     }
+
+    //fungsi update data siwa
+    public function update(Request $request, $id){
+        // validasi data
+        $validated= $request->validate([
+            'name'              =>'required',
+            'nisn'              =>'required ',
+            'alamat'            =>'required', 
+            'email'             =>'required ',
+            'no_handphone'      =>'required ',
+        ]);
+
+        //siapkan data yang akan di update : cari data iswa/ user di database berdasarkan id
+        $datasiswa = User::find($id);
+        
+        // menyiapkan data dalam array untuk update data
+         $datasiswa_update =[
+                    'clas_id'       =>$request->kelas,
+                    'name'          =>$request-> name,
+                    'nisn'          =>$request-> nisn,
+                    'alamat'        =>$request-> alamat,
+                    'email'         =>$request-> email,
+                    'no_handphone'  =>$request-> no_handphone,
+        ];
+
+
+        // update data sesuai dengan data siswa/user yanng sudah disiapkan
+        $datasiswa->update($datasiswa_update);
+
+
+        // kembalikan user ke halaman index
+        return redirect('/');
+    }
 }
  

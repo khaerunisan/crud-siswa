@@ -10,7 +10,7 @@
             <h1>Tambah data siswa</h1>
             <a href="/">Kembali</a><br>
             <img width="70" src="{{ asset('storage/'.$datauser->photo) }}"><br>
-            <form action="/Siswa/store"method="post" enctype="multipart/form-data"> 
+            <form action="/Siswa/update/{{ $datauser->id }}"method="post" enctype="multipart/form-data"> 
                 @csrf
             <br>
             <div>
