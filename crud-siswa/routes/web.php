@@ -17,6 +17,8 @@ Route::get('/Siswa/show/{id}',[SiswaController::class,'show']);
 
 Route::get('/Siswa/edit/{id}',[SiswaController::class,'edit']);
 
+Route::post('/Siswa/update/{id}',[SiswaController::class,'update']);
+
 
 
 
