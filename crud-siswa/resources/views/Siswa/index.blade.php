@@ -8,6 +8,7 @@
     <body>
 
         <h1>Halaman Beranda</h1>
+        <a href="{{ url('clas') }}">Menu kelas</a> | <a href="{{ url('/clas/siswa') }}">Menu Siswa</a>
         <h1>List Data Siswa</h1>
         <a href="Siswa/create">Tambah</a>
         <table border="1" cellpadding="10" cellspacing="0">
@@ -27,7 +28,12 @@
                     <td><img src="{{ asset('storage/'.$siswa->photo)}}"alt="" width="40"></td>
                     <td>{{ $siswa->name }}</td>
                     <td>{{ $siswa->nisn }}</td>
-                    <td>{{ $siswa->clas->name }}</td>
+                    <td>
+                        @if ($siswa->clas)
+                        {{ $siswa->clas->name }}
+                    @else
+                      @endif
+                    </td>
                     <td>{{ $siswa->alamat }}</td>
                      <td class="option-links">
                         {{-- Delete --}}
