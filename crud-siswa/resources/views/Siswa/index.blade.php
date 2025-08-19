@@ -1,14 +1,9 @@
-<DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Baru</title>
-</head>
-    <body>
-
+@extends('Layouts.app')
+@section('tittle')
+<title>Index Siswa</title>
+@endsection
+@section('content')
         <h1>Halaman Beranda</h1>
-        <a href="{{ url('clas') }}">Menu kelas</a> | <a href="{{ url('/clas/siswa') }}">Menu Siswa</a>
         <h1>List Data Siswa</h1>
         <a href="Siswa/create">Tambah</a>
         <table border="1" cellpadding="10" cellspacing="0">
@@ -56,5 +51,5 @@
             <tbody>
         </table>
     </div>
-    </body>
-    </html>
+    @endsection
+    

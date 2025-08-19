@@ -1,11 +1,9 @@
-<DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Edit Data Siswa</title>
-</head>
-        <body>
+@extends('Layouts.app')
+@section('tittle')
+<title>edit siswa</title>
+@endsection
+@section('content')
+
             <h1>Edit data siswa</h1>
             <h1>Tambah data siswa</h1>
             <a href="/">Kembali</a><br>
@@ -101,5 +99,4 @@
         </form>
     </body>
             </form>
-    </body>
-        </html>
+   @endsection

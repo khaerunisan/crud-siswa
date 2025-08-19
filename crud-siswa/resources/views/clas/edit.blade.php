@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Kelas</title>
-</head>
-<body>
+@extends('Layouts.app')
+@section('tittle')
+<title>edit clas</title>
+@endsection
+@section('content')
     <h1>Edit Data Kelas</h1>
     <form action="{{ route('clas.update', $clas->id) }}" method="POST">
         @csrf
@@ -26,5 +23,4 @@
         <button type="submit">Update</button>
         <a href="{{ route('clas.index') }}">Batal</a>
     </form>
-</body>
-</html>
+@endsection
