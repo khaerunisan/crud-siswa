@@ -1,12 +1,8 @@
-<DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Baru</title>
-</head>
-    <body>
-
+@extends('Layouts.app')
+@section('tittle')
+<title>Index Siswa</title>
+@endsection
+@section('content')
         <h1>Halaman Beranda</h1>
         <h1>List Data Siswa</h1>
         <a href="Siswa/create">Tambah</a>
@@ -27,7 +23,12 @@
                     <td><img src="{{ asset('storage/'.$siswa->photo)}}"alt="" width="40"></td>
                     <td>{{ $siswa->name }}</td>
                     <td>{{ $siswa->nisn }}</td>
-                    <td>{{ $siswa->clas->name }}</td>
+                    <td>
+                        @if ($siswa->clas)
+                        {{ $siswa->clas->name }}
+                    @else
+                      @endif
+                    </td>
                     <td>{{ $siswa->alamat }}</td>
                      <td class="option-links">
                         {{-- Delete --}}
@@ -50,5 +51,5 @@
             <tbody>
         </table>
     </div>
-    </body>
-    </html>
+    @endsection
+    
